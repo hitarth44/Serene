@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In - Serene</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" href="/Images/serene app.png" type="image/png" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <img src="/Images/serene app.png" alt="Serene" class="logo-img" />
+            Serene
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Emergency Contacts</a></li>
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="auth-form">
+      <h2>Sign In to Serene</h2>
+
+      <!-- Google Sign In Button -->
+      <button class="btn btn-google" onclick="signInWithGoogle()">
+        Sign in with Google
+      </button>
+
+      <div class="separator">OR</div>
+
+      <!-- Email Sign In Form -->
+      <form id="signin-form">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Sign In</button>
+      </form>
+
+      <div class="form-footer">
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        <p><a href="#">Forgot password?</a></p>
+      </div>
+    </section>
+    <script src="/JS/signin.js"></script>
+  </body>
+</html>

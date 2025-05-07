@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serene - Women's Safety Platform</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="icon" href="/Images/serene app.png" type="image/png" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <img src="/Images/serene app.png" alt="Serene" class="logo-img" />
+            Serene
+          </div>
+          <ul class="nav-links">
+            <li>
+              <a href="/HTML/location.html" id="location-link">My Location</a>
+            </li>
+            <li>
+              <a href="/HTML/contact.html" id="contacts-link"
+                >Emergency Contacts</a
+              >
+            </li>
+            <li><a href="/HTML/signup.html" id="signup-link">Sign Up</a></li>
+            <li><a href="/HTML/signin.html" id="signin-link">Sign In</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Home Section -->
+    <section class="hero" id="home">
+      <div class="hero-content" data-aos="fade-up">
+        <h1>Stay Safe, Stay Connected</h1>
+        <p>
+          Your safety is our priority. Serene is here to keep you connected and
+          secure wherever you are.
+        </p>
+        <button class="btn btn-primary" onclick="scrollToFeatures()">
+          Get Started
+        </button>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <h2>About Serene</h2>
+      <p>
+        Serene is dedicated to empowering women's safety by leveraging
+        technology. Our platform provides real-time alerts, location sharing,
+        and easy access to emergency contacts. We believe that everyone has the
+        right to feel safe, and our mission is to make that a reality for women
+        everywhere.
+      </p>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features-section">
+      <div class="container">
+        <h2>Our Features</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📍</div>
+            <h3>GPS Tracking</h3>
+            <p>
+              Share your location with trusted contacts in real-time and get
+              navigational assistance in unfamiliar areas.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">💬</div>
+            <h3>24/7 Support Chat</h3>
+            <p>
+              Connect with our support team anytime, anywhere for guidance,
+              advice, or just someone to talk to.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🚨</div>
+            <h3>Emergency Alert</h3>
+            <p>
+              Quickly send alerts to your emergency contacts with your location
+              information with just one tap.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">👥</div>
+            <h3>Trusted Contacts</h3>
+            <p>
+              Add and manage contacts who can be notified immediately during
+              emergencies.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔔</div>
+            <h3>Safety Check-ins</h3>
+            <p>
+              Set up automated check-ins that will alert your contacts if you
+              don't respond.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3>Offline Mode</h3>
+            <p>
+              Access critical safety features even when you don't have an
+              internet connection.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2 data-aos="fade-down">About Serene</h2>
+      <p data-aos="fade-up">
+        Serene is a safety platform designed to keep women secure and connected.
+        With features like real-time alerts, live location sharing, and
+        emergency contacts, Serene is your trusted companion in times of need.
+      </p>
+      <p data-aos="fade-up">
+        Our mission is to create a safer environment for women by leveraging
+        technology and community support. Join us and make safety a priority.
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <ul class="footer-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+      <p>&copy; 2025 Serene. All rights reserved.</p>
+    </footer>
+
+    <!-- FontAwesome CDN for Icons -->
+    <!-- Updated FontAwesome CDN for Icons -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Chat Button -->
+    <div class="chat-button" id="open-chat-btn">💬</div>
+
+    <!-- Chat Box -->
+    <div class="chat-container" id="chat-box">
+      <div class="chat-header">
+        <h3>SafeGuard Support</h3>
+        <span class="close-chat" id="close-chat-btn">&times;</span>
+      </div>
+      <div class="chat-messages" id="chat-messages">
+        <div class="message incoming">
+          <p>Hello! How can we help you today?</p>
+        </div>
+      </div>
+      <div class="chat-input">
+        <input
+          type="text"
+          id="chat-input-field"
+          placeholder="Type your message..."
+        />
+        <button id="send-message-btn">Send</button>
+      </div>
+    </div>
+
+    <!-- Emergency Button -->
+    <div class="emergency-button pulse" id="emergency-btn">
+      <span>🚨</span> EMERGENCY
+    </div>
+
+    <!-- Emergency Modal -->
+    <div class="modal" id="emergency-modal">
+      <div class="modal-content">
+        <span class="close-modal" id="close-emergency-modal">&times;</span>
+        <h2 style="color: #f44336; text-align: center">Emergency Alert</h2>
+        <p style="text-align: center; margin: 20px 0">
+          Do you want to send an emergency alert to your contacts?
+        </p>
+        <div style="display: flex; justify-content: center; gap: 20px">
+          <button class="btn btn-emergency" id="send-alert-btn">
+            YES, SEND ALERT
+          </button>
+          <button
+            class="btn"
+            id="cancel-alert-btn"
+            style="background-color: #ddd"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script href="/JS/index.js" rel="script"></script>
+  </body>
+</html>

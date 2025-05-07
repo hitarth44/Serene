@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Contacts - Serene</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" href="/Images/serene app.png" type="image/png" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <img src="/Images/serene app.png" alt="Serene" class="logo-img" />
+            Serene
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- FontAwesome Icons -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <button id="add-contact-btn">+ Add Contact</button>
+
+    <div id="contact-modal" class="modal">
+      <div class="modal-content">
+        <span id="close-contact-modal" class="close-modal">&times;</span>
+        <h2>Add Emergency Contact</h2>
+
+        <input type="text" id="contact-name" placeholder="Name" required />
+        <input
+          type="text"
+          id="contact-phone"
+          placeholder="Phone Number"
+          required
+        />
+        <input
+          type="text"
+          id="contact-relationship"
+          placeholder="Relationship"
+          required
+        />
+
+        <button id="submit-contact">Add Contact</button>
+      </div>
+    </div>
+
+    <!-- Contact Cards with Icons -->
+    <div class="emergency-contacts">
+      <div class="contact-card">
+        <i class="fas fa-phone-alt"></i>
+        <div>
+          <h3>Emergency Helpline</h3>
+          <p>911</p>
+        </div>
+      </div>
+      <div class="contact-card">
+        <i class="fas fa-female"></i>
+        <div>
+          <h3>Women's Helpline</h3>
+          <p>1-800-799-7233</p>
+        </div>
+      </div>
+      <div class="contact-card">
+        <i class="fas fa-shield-alt"></i>
+        <div>
+          <h3>Local Police</h3>
+          <p>555-123-4567</p>
+        </div>
+      </div>
+    </div>
+    <h2 class="contacts-title">Emergency Contacts</h2>
+
+    <!-- Emergency Contacts List -->
+    <div class="emergency-contacts">
+      <!-- Contacts will be dynamically added here -->
+    </div>
+
+    <script src="/JS/contact.js"></script>
+  </body>
+</html>
