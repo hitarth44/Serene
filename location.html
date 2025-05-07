@@ -1,20 +1,64 @@
-<section class="map-section" id="map-section">
-  <div class="container">
-    <h2 class="text-center">My Location</h2>
-    <div class="map-container">
-      <div class="map-placeholder">
-        <p>Map will display here. Enable location to see your position.</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" href="/Images/serene app.png" type="image/png" />
+    <title>My Location</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <img src="/Images/serene app.png" alt="Serene" class="logo-img" />
+            Serene
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Emergency Contacts</a></li>
+          </ul>
+        </nav>
       </div>
-    </div>
-    <div class="location-info">
-      <h3>Current Location</h3>
-      <p id="location-address">
-        Please enable location services to view your address.
-      </p>
-      <p id="location-coordinates">Coordinates: Not available</p>
-      <button class="btn btn-primary mt-20" id="share-location-btn">
-        Share My Location
-      </button>
-    </div>
-  </div>
-</section>
+    </header>
+    <!-- Map Section -->
+    <section class="map-section">
+      <h2>My Current Location</h2>
+
+      <!-- Map Container -->
+      <div class="map-container">
+        <iframe
+          id="mapFrame"
+          width="100%"
+          height="400"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+      </div>
+
+      <!-- Location Info -->
+      <div class="location-info">
+        <h3>Location Details:</h3>
+        <p id="location-address">Fetching address...</p>
+        <p id="location-coordinates">Fetching coordinates...</p>
+
+        <!-- Share Location Button -->
+        <button id="share-location-btn">Share My Location</button>
+      </div>
+    </section>
+
+    <!-- FontAwesome Icons -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JavaScript -->
+    <script src="/JS/location.js"></script>
+    <!-- Relative Path Fix -->
+  </body>
+</html>

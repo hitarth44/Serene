@@ -42,20 +42,20 @@ submitContactBtn.onclick = (e) => {
 
     contactCard.innerHTML = `
         <div class="contact-info">
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Relationship:</strong> ${relationship}</p>
-            <p><strong>Phone:</strong> ${phone}</p>
+            <span>Name: ${name}</span>
+            <span>Relationship: ${relationship}</span>
+            <span>Phone: ${phone}</span>
         </div>
         <div class="contact-actions">
-            <button class="edit-btn" onclick="editContact('${contactId}')">Edit</button>
-            <button class="delete-btn" onclick="deleteContact('${contactId}')">Delete</button>
+            <i class="fas fa-edit edit-btn" onclick="editContact('${contactId}')"></i>
+            <i class="fas fa-trash-alt delete-btn" onclick="deleteContact('${contactId}')"></i>
         </div>
     `;
 
     contactCard.id = contactId;
 
-    // Append to the list of contacts
-    document.querySelector(".emergency-contacts").appendChild(contactCard);
+    // Append to the **correct list** below the title
+    document.getElementById("contact-list").appendChild(contactCard);
 
     // Clear the form
     document.getElementById("contact-name").value = "";
@@ -84,6 +84,8 @@ function editContact(contactId) {
     // Update contact on form submission
     submitContactBtn.onclick = (e) => {
         e.preventDefault();
+        
+        // Update the card with new values
         info[0].innerText = `Name: ${document.getElementById("contact-name").value}`;
         info[1].innerText = `Relationship: ${document.getElementById("contact-relationship").value}`;
         info[2].innerText = `Phone: ${document.getElementById("contact-phone").value}`;
@@ -93,7 +95,6 @@ function editContact(contactId) {
         modal.style.display = "none";
     };
 }
-
 // Delete Contact
 function deleteContact(contactId) {
     const contactCard = document.getElementById(contactId);
